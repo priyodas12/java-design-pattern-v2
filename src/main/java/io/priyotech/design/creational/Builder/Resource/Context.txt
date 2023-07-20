@@ -1,0 +1,20 @@
+what problem builder design pattern solves?
+
+#Objects of the implementation class should be immutable.
+means Object state or properties cannot be changed once its created.(ex-String.class)
+
+#Class Constructor requires a lot of information as a source of properties.
+
+#Objects that need other objects or parts to construct them.
+final object is association of multiple other objects and further more.
+
+Director:<createProduct():has the actual sequential Implementation logic>:--->Builder<Interface:build(),getProduct()>
+-->ConcreteBuilder<Implementation Class: impl of build(),getProduct()>-->Product<final Object definition>
+
+Java Example:
+
+StringBuilder,ByteBuffer,CharBuffer
+
+Drawbacks:
+bit complexity on method chaining!
+partial initialized objects can create problems in some codes!
